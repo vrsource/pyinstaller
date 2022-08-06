@@ -197,6 +197,7 @@ ALL_SUFFIXES = importlib.machinery.all_suffixes()
 #    ensure that it can work on MSYS2 (which requires pywin32-ctypes)
 if is_win:
     try:
+        import win32api
         from win32ctypes.pywin32 import pywintypes  # noqa: F401, E402
         from win32ctypes.pywin32 import win32api  # noqa: F401, E402
     except ImportError:
