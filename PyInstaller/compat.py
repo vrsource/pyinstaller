@@ -171,7 +171,7 @@ is_conda = os.path.isdir(os.path.join(base_prefix, 'conda-meta'))
 is_pure_conda = os.path.isdir(os.path.join(sys.prefix, 'conda-meta'))
 
 # Full path to python interpreter.
-python_executable = getattr(sys, '_base_executable', sys.executable)
+python_executable = sys.executable
 
 # Is this Python from Microsoft App Store (Windows only)? Python from Microsoft App Store has executable pointing at
 # empty shims.
